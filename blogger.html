@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>blog</h1>
+    <ul class="list-group">
+    {% for post in posts %}
+        <li class="list-group-item"><a href="post/{{post.id}}">{{ post.title }}</a>
+        <p>{{post.body}}</p><p>{{post.date}}</p> </li>
+        
+    {% endfor %}
+    </ul>
+{% endblock %}
